@@ -1,0 +1,21 @@
+﻿html {
+    background-color: white;
+    color: black
+}
+
+.LYRname {
+    fill: black !important;
+}
+
+a {
+    color: black
+}
+
+a:link {
+    color: blue
+}
+
+a:hover, a:active, a:focus,
+td.name a:hover, td.name a:active, td.name a:focus {
+    color: red;
+}

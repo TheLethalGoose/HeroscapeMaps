@@ -1,0 +1,216 @@
+﻿html {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* font-family:"tempus sans itc", "Lucida Grande","Arial Unicode MS", sans-serif;}*/
+
+/* general families; serif, sans-serif, cursive, monospace, fantasy */
+/* centaur */
+
+.LYRname {
+    font-family: "tempus sans itc", serif !important;
+}
+
+/*{font-family:"tempus sans itc", "times new roman", "Lucida Grande","Arial Unicode MS", sans-serif;}*/
+
+/*
+body
+{overflow-y: scroll;
+}
+body.noscroll
+{overflow-y: visible;
+}
+*/
+
+a {
+    text-decoration: underline
+}
+
+.sets {
+    text-align: center
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center
+}
+
+h1 {
+    font-size: 30px
+}
+
+h2 {
+    text-decoration-line: underline;
+}
+
+h2, h5 {
+    font-size: 24px
+}
+
+h3, h5 {
+    text-align: left
+}
+
+h1 img, td img, h3 img {
+    vertical-align: middle;
+    border-width: none
+}
+
+ul {
+    list-style: disc outside;
+    marker-offset: 1px
+}
+
+ol.none {
+    list-style: none
+}
+
+i {
+    color: #400007;
+}
+
+p {
+    font-size: 20px
+}
+
+p.float img, p.float svg /*, p.float object */
+{
+    float: left;
+    margin: 5px 10px 5px 10px
+}
+
+p.clear {
+    text-align: center;
+    clear: left;
+}
+
+hr {
+    clear: left
+}
+
+table {
+    text-align: center;
+    border-collapse: separate; /*border-collapse:collapse;*/
+    border-width: 1px;
+    border-style: solid;
+    empty-cells: hide
+}
+
+td, th {
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+}
+
+table {
+    width: 100%;
+}
+
+/*table#sets
+{width:75%}*/
+table#terrain {
+    width: 60%;
+}
+
+th.power {
+    text-align: left;
+}
+
+th.set_type, th.set_name {
+    text-align: left;
+    text-indent: 10%;
+}
+
+/*
+div.glyphs
+{position:absolute; top:160px; bottom:0px;}
+tbody.glyphs
+{overflow:auto;}
+*/
+
+td.left, th.left {
+    text-align: left
+}
+
+td.top {
+    vertical-align: top
+}
+
+td.right, th.right {
+    text-align: right
+}
+
+td.symbol {
+    padding: 1px
+}
+
+/* not sure this is used. table has border="0" in it */
+td > table {
+    border: 0px;
+}
+
+td > table td {
+    border: 0px;
+}
+
+/*
+tr.tr_bottom
+{border-width:5px}
+*/
+
+@media print {
+    html {
+        background-color: white;
+        color: black
+    }
+
+    h3.nav, hr.scenario, h6.noprint {
+        display: none
+    }
+
+    div.page_break {
+        page-break-after: always
+    }
+
+    a {
+        text-decoration: none;
+        color: black
+    }
+
+    a:link, td.name a:visited {
+        color: black
+    }
+
+    table {
+        border-color: black;
+        color: black
+    }
+
+    table#sets, table#terrain {
+        width: 100%
+    }
+
+    span.contents {
+        background-color: white
+    }
+
+    span.contents, td.content_type, td.content_name, td.content_qty, td.name, b.name, b.power_name, td.power_name, b.works_with, div.mop_rules span {
+        color: black
+    }
+
+    div.mop_rules span {
+        font-weight: bold
+    }
+
+    td.Einar, td.Jandar, td.Ullar, td.Utgar, td.Vydar,
+    table *.move, table *.range, table *.attack, table *.defense {
+        background-color: white
+    }
+
+    tr {
+        page-break-inside: avoid
+    }
+}

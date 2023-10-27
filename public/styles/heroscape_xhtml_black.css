@@ -1,0 +1,105 @@
+﻿html {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:link {
+    color: yellow;
+}
+
+td.name a:visited {
+    color: lime;
+}
+
+/*limegreen*/
+a:hover, a:active, a:focus,
+td.name a:hover, td.name a:active, td.name a:focus {
+    color: orangered;
+}
+
+/*red*/
+
+span.here {
+    background-color: silver;
+    color: black;
+}
+
+span.contents, span.edit {
+    background-color: black;
+    color: aqua;
+}
+
+td.content_qty, td.content_type, td.content_name, span.weighted {
+    color: aqua;
+}
+
+b.name, td.name, div.mop_rules span, span.name {
+    color: lime;
+}
+
+/*limegreen*/
+
+b.power_name, b.action, span.action, b.attack, td.power_name {
+    color: orangered;
+}
+
+/*red*/
+
+b.defend {
+    color: royalblue;
+}
+
+b.works_with {
+    color: fuchsia;
+}
+
+table {
+    border-color: gray;
+}
+
+td, th {
+    border-color: gray;
+}
+
+td.symbol {
+    background-color: white;
+    color: black;
+}
+
+table *.move, td.Ullar {
+    background-color: green
+}
+
+table *.range, td.Vydar {
+    background-color: dimgray
+}
+
+table *.attack, td.Utgar {
+    background-color: firebrick
+}
+
+table *.defense, td.Jandar {
+    background-color: royalblue
+}
+
+td.Einar {
+    background-color: purple
+}
+
+td.Aquilla {
+    background-color: indigo
+}
+
+td.Valkrill {
+    background-color: olive
+}
+
+/*darkgoldenrod*/
+
+tr:hover {
+    background-color: darkslategray
+}

@@ -1,0 +1,407 @@
+﻿/*
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace svg "http://www.w3.org/2000/svg";
+@namespace xlink "http://www.w3.org/1999/xlink";
+although FF3 can handle css namespaces, batik rasterizer cannot.
+*/
+
+/*
+To Fade:
+
+round((bgR-fgR)*(1-O)+fgR)
+round((bgG-fgG)*(1-O)+fgG)
+round((bgB-fgB)*(1-O)+fgB)
+
+where X = R, G, or B
+bgX = X value of background color
+fgX = X value of foreground color
+O = opacity value from 1.0 to 0.0
+
+I'm currently using white background (bgRGB = 255) and opacity of 0.3
+
+Used color keywords listed here:
+http://www.w3.org/TR/css3-color/#svg-color
+*/
+
+
+
+#tile01, #tile02, #tile03, #tile04, #tile05,
+#tile06a, #tile06b, #tile07a, #tile07b, #tile09, #tile24 {
+    stroke: black;
+    stroke-width: 7px;
+}
+
+
+/* Rise of the Valkyrie */
+
+#GS01, #GS02, #GS03, #GS07, #GS24 {
+    fill: limegreen;
+}
+
+#RK01, #RK02, #RK03, #RK07, #RK24 {
+    fill: gray;
+}
+
+#SD01, #SD02, #SD03, #SD07 {
+    fill: sandybrown;
+}
+
+#WTR {
+    fill: dodgerblue;
+}
+
+/*{fill:blue;}*/
+
+#RNS, #RNL {
+    fill: none;
+    stroke-width: 17px;
+    stroke: crimson;
+}
+
+#glyph {
+    fill: maroon;
+}
+
+#GA text, #GB text, #GC text, #GD text, #GE text, #GG text,
+#GI text, #GJ text, #GK text, #GL text, #GM text, #GN text,
+#GR text, #GS text, #GT text, #GU text, #GV text, #GW text, #G text {
+    fill: white;
+    font-size: 56px;
+}
+
+/* svg|use[xlink|href=#glyph]{fill:white;} this works in FF3 */
+
+/* Road to the Forgotten Forest */
+
+#gravel {
+    fill: darkslategray;
+}
+
+#RD01fill, #RD02fill, #RD05fill {
+    fill: darkgray;
+}
+
+#STW {
+    fill: darkgray;
+    stroke: black;
+    stroke-width: 7px;
+}
+
+#ET01, #ET15 /*use*/
+{
+    fill: forestgreen;
+}
+
+#ET15rk1, #ET15rk2 {
+    fill: gray;
+}
+
+#ET10 text, #ET11 text, #ET12 text,
+#ET15H, #ET15H1, #ET15H2 {
+    fill: white;
+    font-size: 56px;
+}
+
+
+/* Volcarren Wasteland */
+
+#LF01, #LF02, #LF07 {
+    fill: darkred;
+}
+
+#MLV {
+    fill: red;
+}
+
+
+/* Thelenk Tundra */
+
+#crystal {
+    stroke: lightsteelblue;
+    stroke-width: 3px;
+    stroke-linecap: round;
+}
+
+#SW01fill, #SW02fill {
+    fill: lightcyan;
+}
+
+#ICE, #ice3, #ice4, #ice6, #GB01, #GB03, #GB04, #GB06 {
+    fill: lightsteelblue;
+}
+
+/* iceX also take care of GMs */
+#crack {
+    stroke: navy;
+    stroke-width: 3px;
+}
+
+#GM01 text,
+#GM03H, #GM03H1, #GM03H2, #GM03H3, #GM03H4, #GM03H5,
+#GM04H, #GM04H1, #GM04H2, #GM04H3, #GM04H4, #GM04H5,
+#GM06H, #GM06H1, #GM06H2 {
+    fill: navy;
+    font-size: 56px;
+}
+
+
+/* Fortress of the Archkyrie */
+
+#WW01fill1, #WW07fill1, #WW09fill1 {
+    fill: darkgray;
+}
+
+#WW01fill2, #WW07fill2, #WW09fill2 {
+    fill: lightgray;
+}
+
+#BTL {
+    stroke: black;
+    fill: darkgray;
+}
+
+#BTB {
+    stroke-width: 7px;
+    stroke-linejoin: bevel;
+}
+
+/* BTB also used by BFG */
+
+#fhexfill1 {
+    fill: gray;
+}
+
+#fhexfill2 {
+    fill: lightgray;
+}
+
+#frect {
+    stroke: none;
+    fill: lightgray;
+}
+
+/* FCBs also used by FDW */
+#FBH, #FWH {
+    fill: darkslategray;
+    font-size: 56px;
+}
+
+#FDWdash {
+    stroke: black;
+    stroke-width: 3px;
+    stroke-dasharray: 8px, 4px;
+    stroke-linejoin: bevel;
+}
+
+#FDWdoor {
+    stroke: sienna;
+    stroke-width: 17px;
+    stroke-linecap: round;
+}
+
+#FDWmid1 {
+    fill: none;
+    stroke: black;
+    stroke-width: 7px;
+}
+
+#FDWmid2 {
+    stroke: none;
+    fill: lightgray;
+}
+
+#FDW text {
+    fill: darkslategray;
+    font-size: 56px;
+}
+
+#LDRfill {
+    fill: khaki;
+}
+
+#LDRr1, #LDRr3 {
+    stroke: none;
+    fill: sienna;
+}
+
+#LDRr2 {
+    stroke: none;
+    fill: khaki;
+}
+
+#LDRline {
+    fill: none;
+}
+
+#BFGfill1 {
+    fill: linen;
+    stroke-width: 7px;
+    stroke: royalblue;
+}
+
+#BFGfill2 {
+    fill: royalblue;
+    stroke: royalblue;
+}
+
+#FLG {
+    stroke: none;
+    fill: royalblue;
+}
+
+/* Conflict Begins */
+
+#AT01, #AT02, #AT07 {
+    fill: darkslategray;
+}
+
+#CT01, #CT02, #CT07, #WR06 {
+    fill: gainsboro;
+}
+
+#WHR {
+    fill: none;
+    stroke-width: 17px;
+    stroke: firebrick;
+}
+
+#glyph2 {
+    fill: gold;
+}
+
+#GMI text, #GOP text, #G2 text {
+    fill: firebrick;
+    font-size: 56px;
+}
+
+
+/* Swarm of the Marro */
+
+#SP01, #SP02, #SP03, #SP07, #SP24 {
+    fill: darkgreen;
+}
+
+#SPW, #spw6 {
+    fill: olivedrab;
+}
+
+#spgap {
+    stroke: darkgreen;
+    stroke-width: 3px;
+}
+
+#sac1, #sac2, #sac3, #sac4 {
+    fill: sandybrown;
+}
+
+
+/* Ticalla Jungle */
+
+#UB09 {
+    fill: gold;
+}
+
+#UB09 text {
+    fill: black;
+    font-size: 56px;
+}
+
+#PT01 {
+    fill: mediumseagreen;
+}
+
+#PT14 text, #PT15 text, #PT16 text {
+    fill: white;
+    font-size: 56px;
+}
+
+
+/* Battle for the Underdark */
+
+#DN01, #DN02, #DN03, #DN07, #DN24 {
+    fill: darkseagreen;
+}
+
+#SHDfill1, #RB03fill1, #RO01, #RO03 {
+    fill: darkgray;
+}
+
+#SHDfill2, #RB03fill2 {
+    fill: black;
+}
+
+#RO01 text, #RO03H, #RO03H1, #RO03H2, #RO03H3, #RO03H4, #RO03H5 {
+    fill: black;
+    font-size: 56px;
+}
+
+#tglyph {
+    fill: goldenrod;
+}
+
+#TG text, #TGB text, #TGH text, #TGD text, #TGPH text {
+    fill: black;
+    font-size: 56px;
+}
+
+
+/* Miscellaneous */
+
+#NULL {
+    fill: none;
+    stroke: none;
+}
+
+#P1F1 {
+    fill: white;
+    stroke: black;
+    stroke-width: 3px;
+}
+
+#P1F2 rect {
+    fill: white;
+}
+
+#P1F2mid {
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke: black;
+}
+
+#P2F1 {
+    fill: black;
+    stroke: white;
+    stroke-width: 3px;
+}
+
+#P2F2 rect {
+    fill: black;
+}
+
+#P2F2mid {
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke: white;
+}
+
+#P1SZ {
+    fill: olive;
+}
+
+#P2SZ {
+    fill: purple;
+}
+
+#P3SZ {
+    fill: teal;
+}
+
+#P4SZ {
+    fill: navy;
+}
+
+#LN1, #LN2 {
+    stroke: black;
+    stroke-width: 11px;
+    stroke-linecap: round;
+}

@@ -5,7 +5,7 @@
         <div class="control-group">
           <label class="icon-label" @click="exclusiveToggle = !exclusiveToggle">
             <font-awesome-icon
-                :color="'#46ff81'"
+                :color="!exclusiveToggle ? '#ff184d' : '#1ec252'"
                 :size="'3x'"
                 :icon="!exclusiveToggle ? 'bullseye' : 'circle-dot'"
                 v-tooltip.bottom="'Filter Exklusive'"
@@ -16,7 +16,7 @@
           <label v-for="set in iconsSets" :key="set" class="icon-label" @click="toggleFilter(set)">
             <font-awesome-icon
                 :size="'3x'"
-                :style="{ opacity: isActive(set) ? '1.5' : '0.5'}"
+                :style="{ opacity: isActive(set) ? '1' : '0.5'}"
                 :icon="iconsAndColors[set].icon || 'xmark'"
                 :color="iconsAndColors[set].color || 'black'"
                 v-tooltip.bottom="iconsAndColors[set].tooltip || 'null'"
@@ -48,9 +48,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { maps } from '@/data/maps'
-import MapCard from '@/components/Map.vue'
 import { iconsAndColors } from '@/util/iconAndColors'
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import MapCard from '@/components/MapCard.vue'
 
 const requiredSets: Set<string> = new Set();
 
@@ -79,10 +79,12 @@ const filteredMaps = computed(() => {
 
       const playerFilters = currentActiveFilters.filter(filter => diceRegex.test(filter));
       const hasRequiredPlayerCount = playerFilters.length === 0 || playerFilters.some(filter => map.requiredSets.includes(filter));
+      const otherFilters = currentActiveFilters.filter(filter => !diceRegex.test(filter));
 
-      const otherFilters = currentActiveFilters.filter(filter => diceRegex.test(filter));
+      if(map.name === 'WellspringOfObsession'){otherFilters.push('RV');}
+
       const allOtherFiltersIncluded = otherFilters.every(filter => map.requiredSets.includes(filter));
-      const hasExactOtherIcons = otherFilters.length === map.requiredSets.filter(attr => diceRegex.test(attr)).length;
+      const hasExactOtherIcons = otherFilters.length === map.requiredSets.filter(attr => !diceRegex.test(attr)).length;
 
       return hasRequiredPlayerCount && allOtherFiltersIncluded && hasExactOtherIcons;
     });
@@ -106,7 +108,6 @@ const isActive = (attr: string) => {
 </script>
 
 <style scoped>
-
 .filter-controls {
   display: flex;
   align-items: center;
@@ -132,7 +133,7 @@ const isActive = (attr: string) => {
 }
 
 #linkList li {
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
 }
 </style>

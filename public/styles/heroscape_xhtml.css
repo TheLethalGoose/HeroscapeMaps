@@ -4,25 +4,9 @@
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-/* font-family:"tempus sans itc", "Lucida Grande","Arial Unicode MS", sans-serif;}*/
-
-/* general families; serif, sans-serif, cursive, monospace, fantasy */
-/* centaur */
-
 .LYRname {
     font-family: "tempus sans itc", serif !important;
 }
-
-/*{font-family:"tempus sans itc", "times new roman", "Lucida Grande","Arial Unicode MS", sans-serif;}*/
-
-/*
-body
-{overflow-y: scroll;
-}
-body.noscroll
-{overflow-y: visible;
-}
-*/
 
 a {
     text-decoration: underline
@@ -42,10 +26,6 @@ h1 {
     font-size: 30px
 }
 
-h2 {
-    text-decoration-line: underline;
-}
-
 h2, h5 {
     font-size: 24px
 }
@@ -56,7 +36,6 @@ h3, h5 {
 
 h1 img, td img, h3 img {
     vertical-align: middle;
-    border-width: none
 }
 
 ul {
@@ -90,76 +69,6 @@ p.clear {
 hr {
     clear: left
 }
-
-table {
-    text-align: center;
-    border-collapse: separate; /*border-collapse:collapse;*/
-    border-width: 1px;
-    border-style: solid;
-    empty-cells: hide
-}
-
-td, th {
-    border-width: 1px;
-    border-style: solid;
-    padding: 4px;
-}
-
-table {
-    width: 100%;
-}
-
-/*table#sets
-{width:75%}*/
-table#terrain {
-    width: 60%;
-}
-
-th.power {
-    text-align: left;
-}
-
-th.set_type, th.set_name {
-    text-align: left;
-    text-indent: 10%;
-}
-
-/*
-div.glyphs
-{position:absolute; top:160px; bottom:0px;}
-tbody.glyphs
-{overflow:auto;}
-*/
-
-td.left, th.left {
-    text-align: left
-}
-
-td.top {
-    vertical-align: top
-}
-
-td.right, th.right {
-    text-align: right
-}
-
-td.symbol {
-    padding: 1px
-}
-
-/* not sure this is used. table has border="0" in it */
-td > table {
-    border: 0px;
-}
-
-td > table td {
-    border: 0px;
-}
-
-/*
-tr.tr_bottom
-{border-width:5px}
-*/
 
 @media print {
     html {

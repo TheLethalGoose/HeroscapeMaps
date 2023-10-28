@@ -1,7 +1,7 @@
 <template>
   <div class="card" @click="navigateToMap">
     <div class="card-content">
-      <h2 class="card-title">{{ page }}</h2>
+      <h2 class="card-title">{{ page?.replace(/(?<=[a-z])([A-Z])/g, ' $1') }}</h2>
       <div class="icon-section">
         <div class="icons">
           <span v-for="set in iconsSets" :key="set">
@@ -27,8 +27,8 @@
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {computed} from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { computed } from "vue";
 import { iconsAndColors } from '@/util/iconAndColors'
 
 const props = defineProps<{
@@ -41,10 +41,8 @@ const iconsSets = computed(() => props.requiredSets?.filter(set => !diceRegex.te
 const diceSets = computed(() => props.requiredSets?.filter(set => diceRegex.test(set)) || []);
 
 const navigateToMap = () => {
-  location.href = `/maps/${props.page}.html`;
+  window.open(`/maps/${props.page}.html`, '_blank');
 };
-
-
 </script>
 
 <style scoped>

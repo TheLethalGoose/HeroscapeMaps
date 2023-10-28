@@ -81,7 +81,7 @@ export const maps = [
   },
   {
     "name": "WellspringOfObsession",
-    "requiredSets": ["RV", "2P", "3P", "4P"]
+    "requiredSets": ["RV","RV", "2P", "3P", "4P", "5P"]
   },
   {
     "name": "WolfSwampRoad",
@@ -90,5 +90,13 @@ export const maps = [
   {
     "name": "Xualtiaca",
     "requiredSets": ["SM", "2P", "4P"]
+  },
+  {
+    "name": "Genotech",
+    "requiredSets": ["MV", "2P"]
+  },
+  {
+    "name": "TribecaLabs",
+    "requiredSets": ["MV", "2P"]
   }
 ]

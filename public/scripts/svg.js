@@ -1,5 +1,5 @@
 function rotateSVG(svg) {
-    const svgElement = svg.closest('.float').querySelector('svg');
+    const svgElement = svg.closest('.float, .clear').querySelector('svg');
     let degrees = 0;
     if (svgElement) {
         const currentRotation = svgElement.getAttribute('transform');
@@ -19,7 +19,7 @@ function rotateSVG(svg) {
     }
 }
 function requestSvgFullscreen(svg){
-    const svgElement = svg.closest('.float').querySelector('svg');
+    const svgElement = svg.closest('.float, .clear').querySelector('svg');
 
     if (svgElement.requestFullscreen) {
         svgElement.requestFullscreen();

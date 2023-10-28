@@ -39,7 +39,7 @@ http://www.w3.org/TR/css3-color/#svg-color
 }
 
 #RK01, #RK02, #RK03, #RK07, #RK24 {
-    fill: gray;
+    fill: grey;
 }
 
 #SD01, #SD02, #SD03, #SD07 {
@@ -93,7 +93,7 @@ http://www.w3.org/TR/css3-color/#svg-color
 }
 
 #ET15rk1, #ET15rk2 {
-    fill: gray;
+    fill: grey;
 }
 
 #ET10 text, #ET11 text, #ET12 text,
@@ -168,7 +168,7 @@ http://www.w3.org/TR/css3-color/#svg-color
 /* BTB also used by BFG */
 
 #fhexfill1 {
-    fill: gray;
+    fill: grey;
 }
 
 #fhexfill2 {
@@ -385,19 +385,19 @@ http://www.w3.org/TR/css3-color/#svg-color
 }
 
 #P1SZ {
-    fill: olive;
+    fill: #bdbd00;
 }
 
 #P2SZ {
-    fill: purple;
+    fill: #c200c2;
 }
 
 #P3SZ {
-    fill: teal;
+    fill: #00c4c4;
 }
 
 #P4SZ {
-    fill: navy;
+    fill: #0000d0;
 }
 
 #LN1, #LN2 {

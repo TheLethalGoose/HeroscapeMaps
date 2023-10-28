@@ -2,10 +2,8 @@
     font-size: 20px;
     font-weight: normal;
     font-family: 'Helvetica', 'Arial', sans-serif;
-}
-
-.LYRname {
-    font-family: "tempus sans itc", serif !important;
+    color: white;
+    background-color: #151515;
 }
 
 a {
@@ -48,7 +46,7 @@ ol.none {
 }
 
 i {
-    color: #400007;
+    color: #d30017;
 }
 
 p {

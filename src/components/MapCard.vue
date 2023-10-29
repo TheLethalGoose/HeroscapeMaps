@@ -27,9 +27,9 @@
 </template>
 
 <script setup lang="ts">
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { computed } from "vue";
-import { iconsAndColors } from '@/util/iconAndColors'
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {computed} from "vue";
+import {iconsAndColors} from '@/util/iconAndColors'
 
 const props = defineProps<{
   page?: string
@@ -41,7 +41,7 @@ const iconsSets = computed(() => props.requiredSets?.filter(set => !diceRegex.te
 const diceSets = computed(() => props.requiredSets?.filter(set => diceRegex.test(set)) || []);
 
 const navigateToMap = () => {
-  window.open(`/maps/${props.page}.html`, '_blank');
+  window.open(`${import.meta.env.BASE_URL}maps/${props.page}.html`, '_blank');
 };
 </script>
 

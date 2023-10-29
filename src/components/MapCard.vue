@@ -2,8 +2,9 @@
   <div class="card" @click="navigateToMap">
     <div class="card-content">
       <h2 class="card-title">{{ page?.replace(/(?<=[a-z])([A-Z])/g, ' $1') }}</h2>
-      <div class="icon-section">
-        <div class="icons">
+      <div class="filters">
+        <div class="icon-section">
+          <div class="icons">
           <span v-for="set in iconsSets" :key="set">
             <font-awesome-icon
                 style="font-size: 30px"
@@ -11,8 +12,8 @@
                 :color="iconsAndColors[set].color || 'black'"
             ></font-awesome-icon>
           </span>
-        </div>
-        <div class="dice">
+          </div>
+          <div class="dice">
           <span v-for="set in diceSets" :key="set">
             <font-awesome-icon
                 style="font-size: 30px"
@@ -20,6 +21,7 @@
                 :color="iconsAndColors[set].color || 'black'"
             ></font-awesome-icon>
           </span>
+          </div>
         </div>
       </div>
     </div>
@@ -108,5 +110,11 @@ const navigateToMap = () => {
   width: 40px;
   height: 40px;
   align-items: center;
+}
+
+@media (max-width: 575px) {
+  .filters {
+    display: none;
+  }
 }
 </style>

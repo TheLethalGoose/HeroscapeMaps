@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './styles/main.css'
 import 'floating-vue/dist/style.css'
 
 import { createApp } from 'vue'

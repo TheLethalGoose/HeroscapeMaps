@@ -25,7 +25,7 @@ export const maps = [
   },
   {
     "name": "SoulrazorCanyon",
-    "requiredSets": ["RV", "2P", "3P"]
+    "requiredSets": ["RV", "2P"]
   },
   {
     "name": "SteamAlley",

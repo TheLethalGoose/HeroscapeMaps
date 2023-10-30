@@ -4,7 +4,7 @@
       <h2 class="card-title">{{ page?.replace(/(?<=[a-z])([A-Z])/g, ' $1') }}</h2>
       <div class="filters">
         <div class="icon-section">
-          <div class="icons">
+          <div class="icons" v-tooltip.top="'Required Sets'">
           <span v-for="set in iconsSets" :key="set">
             <font-awesome-icon
                 style="font-size: 30px"
@@ -13,7 +13,7 @@
             ></font-awesome-icon>
           </span>
           </div>
-          <div class="dice">
+          <div class="dice" v-tooltip.top="'Scenario Player Range'">
           <span v-for="set in diceSets" :key="set">
             <font-awesome-icon
                 style="font-size: 30px"

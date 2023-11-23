@@ -81,7 +81,8 @@ const filteredMaps = computed(() => {
       const hasRequiredPlayerCount = playerFilters.length === 0 || playerFilters.some(filter => map.requiredSets.includes(filter));
       const otherFilters = currentActiveFilters.filter(filter => !diceRegex.test(filter));
 
-      if(map.name === 'WellspringOfObsession'){otherFilters.push('RV');}
+      if(map.name === 'WellspringOfObsession'){otherFilters.push('RV')}
+      if(map.name === 'BloodredRiver'){otherFilters.push('TT');}
 
       const allOtherFiltersIncluded = otherFilters.every(filter => map.requiredSets.includes(filter));
       const hasExactOtherIcons = otherFilters.length === map.requiredSets.filter(attr => !diceRegex.test(attr)).length;

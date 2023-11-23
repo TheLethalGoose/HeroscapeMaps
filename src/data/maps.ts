@@ -8,6 +8,10 @@ export const maps = [
     "requiredSets": ["RV", "2P", "3P"]
   },
   {
+    "name": "BloodredRiver",
+    "requiredSets": ["RV", "RF", "TT", "TT", "2P", "3P", "4P"]
+  },
+  {
     "name": "FeldsparPass",
     "requiredSets": ["RV", "SM", "TJ", "2P"]
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="card" @click="navigateToMap">
     <div class="card-content">
-      <h2 class="card-title">{{ page?.replace(/(?<=[a-z])([A-Z])/g, ' $1') }}</h2>
+      <h2 class="card-title">{{ page?.replace(/(?<=[a-z])([A-Z])|(?<=[a-zA-Z])(\d)/g, ' $1$2')}}</h2>
       <div class="filters">
         <div class="icon-section">
           <div class="icons" v-tooltip.top="'Required Sets'">

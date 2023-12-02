@@ -1,5 +1,21 @@
 export const maps = [
   {
+    "name": "AncientSanctumRoom1",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
+    "name": "AncientSanctumRoom2",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
+    "name": "AncientSanctumRoom3",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
+    "name": "AncientSanctumRoom4",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
     "name": "AvoriceStand",
     "requiredSets": ["TJ", "SM", "2P", "3P"]
   },
@@ -22,6 +38,18 @@ export const maps = [
   {
     "name": "MontiquaLedge",
     "requiredSets": ["SM", "2P", "3P"]
+  },
+  {
+    "name": "OthkuriksThrone",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
+    "name": "RiverOfBloodRoom1",
+    "requiredSets": ["BU", "2P"]
+  },
+  {
+    "name": "RoadToTheUnderdark",
+    "requiredSets": ["RV", "RF", "BU", "2P"]
   },
   {
     "name": "SearingPass",

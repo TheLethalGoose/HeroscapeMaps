@@ -39,7 +39,7 @@
 
     <ul id="linkList">
       <li v-for="map in filteredMaps" :key="map.name">
-        <MapCard :page="map.name" :requiredSets="map.requiredSets"></MapCard>
+        <MapCard :page="map.name" :gary="map.url" :requiredSets="map.requiredSets"></MapCard>
       </li>
     </ul>
   </div>

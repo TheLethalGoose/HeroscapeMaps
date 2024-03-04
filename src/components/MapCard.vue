@@ -36,6 +36,7 @@ import {iconsAndColors} from '@/util/iconAndColors'
 const props = defineProps<{
   page?: string
   requiredSets?: string[]
+  gary?: string
 }>();
 
 const diceRegex = /^\dP$/;
@@ -43,7 +44,8 @@ const iconsSets = computed(() => props.requiredSets?.filter(set => !diceRegex.te
 const diceSets = computed(() => props.requiredSets?.filter(set => diceRegex.test(set)) || []);
 
 const navigateToMap = () => {
-  window.open(`${import.meta.env.BASE_URL}maps/${props.page}.html`, '_blank');
+  //window.open(`${import.meta.env.BASE_URL}maps/${props.page}.html`, '_blank');
+  window.open(props.gary);
 };
 </script>
 
